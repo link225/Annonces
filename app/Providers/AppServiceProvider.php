@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->bind(
+            'App\inter\V1\HomeServiceInter',
+            'App\impl\HomeServiceImpl'
+        );
     }
 }
