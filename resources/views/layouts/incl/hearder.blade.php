@@ -14,7 +14,7 @@
         
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item is-active">
+                <a href="{{ url('/') }}" class="navbar-item is-active">
                     <span class="icon-text">
                         <span class="icon">
                             <i class="fas fa-home"></i>
@@ -25,7 +25,7 @@
                     </span>
                 </a>
 
-                <a class="navbar-item">
+                <a href="{{ url('/articles') }}" class="navbar-item">
                     <span class="icon-text">
                         <span class="icon">
                             <i class="fas fa-pager"></i>
@@ -51,23 +51,33 @@
                     <a class="navbar-item">
                       Contact
                     </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item">
-                      Report an issue
-                    </a>
                   </div>
                 </div>
+
+                @if (1)
+                {{ dd(Route::has('signin')) }}
+                <a href="#contact" class="navbar-item">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fas fa-address-card"></i>
+                        </span>
+                        <span>
+                            contact
+                        </span>
+                    </span>
+                </a>
+                @endif
             </div>
         
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                    <a class="button ">
+                    <a href="{{ route('signin') }}" class="button ">
                         <span class="icon">
                             <i class="fas fa-user"></i>
                         </span>
                     </a>
-                    <a class="button is-success">
+                    <a href="{{ route('signup') }}" class="button is-success">
                         <span class="icon">
                             <i class="fas fa-user-plus"></i>
                         </span>  

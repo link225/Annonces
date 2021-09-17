@@ -18,14 +18,17 @@
     </style>
 </head>
 <body>
-
+  <header>
+    @include('layouts.incl.hearder')
+  </header>
     <main class="container my-6">
         <section class="columns">
             <div class="column is-offset-4  is-9-mobile is-offset-1-mobile">
                 <p class="title is-3">
-                    Annonces
+                    Connexion
                 </p>
                 <form class="box column is-4">
+                  @csrf
                     <div class="field">
                       <label class="label">Email</label>
                       <div class="control ">
@@ -46,8 +49,11 @@
                             Remember me
                         </label>
                     </div>
+                    <div class="field">
+                      <a href="{{ route('signup') }}" class="is-link">sign up</a>
+                  </div>
                   
-                    <button class="button is-primary">Sign in</button>
+                    <button class="button is-black is-outlined ">Sign in</button>
                 </form>
             </div>
         </section>

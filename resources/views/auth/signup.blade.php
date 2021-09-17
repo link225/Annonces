@@ -14,13 +14,18 @@
 </head>
 <body>
 
+  <header>
+    @include('layouts.incl.hearder')
+  </header>
+
     <main class="container my-6">
         <section class="columns">
             <div class="column is-offset-4  is-9-mobile is-offset-1-mobile">
                 <p class="title is-3">
-                    Annonces
+                    Inscription
                 </p>
-                <form class="box column is-4">
+                <form method="POST" class="box column is-4">
+                  {{ csrf_field() }}
                     <div class="field">
                       <label class="label">Name</label>
                       <div class="control ">
@@ -55,7 +60,7 @@
                             <input class="input" type="password" placeholder="********">
                         </div>
                     </div>
-                    <button class="button is-primary">Sign in</button>
+                    <button type="submit" class="button is-black is-outlined">Sign up</button>
                 </form>
             </div>
         </section>
