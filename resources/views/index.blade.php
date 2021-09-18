@@ -36,7 +36,7 @@
         </p>
         <p>
           <nav class="level is-mobile">
-            <div class="level">
+            <div class="level is-mobile">
               <p class="level-item">
                 Auteur social:
               </p>

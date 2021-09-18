@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,7 @@ Route::group(['prefix' => 'auth'], function() {
 });
 
 
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('/',[AdminController::class,"index"])->name("Adam");
+});

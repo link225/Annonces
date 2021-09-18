@@ -54,19 +54,18 @@
                   </div>
                 </div>
 
-                @if (1)
-                {{ dd(Route::has('signin')) }}
-                <a href="#contact" class="navbar-item">
-                    <span class="icon-text">
-                        <span class="icon">
-                            <i class="fas fa-address-card"></i>
+                    <a href="{{ url('/#contact')}}" class="navbar-item">
+                        <span class="icon-text">
+                            <span class="icon">
+                                <i class="fas fa-address-card"></i>
+                            </span>
+                            <span>
+                                Contact
+                            </span>
                         </span>
-                        <span>
-                            contact
-                        </span>
-                    </span>
-                </a>
-                @endif
+                    </a>
+                
+                
             </div>
         
             <div class="navbar-end">
