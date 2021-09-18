@@ -14,5 +14,32 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.master');
+    return view('index');
 });
+
+
+Route::get('/articles', function() {
+    return view("articles.index");
+});
+
+
+Route::get('/article', function() {
+    return view('articles.article');
+});
+
+
+
+Route::group(['prefix' => 'auth'], function() {
+    
+    Route::get('/', function() {
+        return view('auth.signin');
+    })->name('signin');
+    
+    
+    Route::get('/signup', function() {
+        return view("auth.signup");
+    })->name("signup");
+    
+});
+
+
